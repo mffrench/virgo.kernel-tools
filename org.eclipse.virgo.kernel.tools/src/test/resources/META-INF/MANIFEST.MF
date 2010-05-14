@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: kernel.tools.test
+Bundle-Version: 1
+Import-Package: org.eclipse.virgo.kernel.tools,
+ org.eclipse.virgo.kernel.osgi.provisioning.tools,
+ org.eclipse.virgo.medic.eventlog,
+ org.eclipse.virgo.util.osgi.manifest,
+ org.junit,
+ org.osgi.framework
