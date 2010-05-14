@@ -1,0 +1,5 @@
+Library-SymbolicName: org.springframework_spring
+Library-Version: 3.0.0.RELEASE
+Import-Bundle: org.springframework.core;version="3.0.0.RELEASE",
+ org.springframework.beans;version="3.0.0.RELEASE",
+ org.springframework.context;version="3.0.0.RELEASE"

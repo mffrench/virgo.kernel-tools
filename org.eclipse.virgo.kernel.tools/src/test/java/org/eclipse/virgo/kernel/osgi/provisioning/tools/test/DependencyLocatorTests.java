@@ -144,11 +144,11 @@ public class DependencyLocatorTests {
             assertFalse(packageNames.isEmpty());
 
             if (dependencyLocation.getName().contains("context")) {
-                assertTrue(packageNames.size() == 47);
+                assertTrue(packageNames.size() == 59);
             } else if (dependencyLocation.getName().contains("core")) {
-                assertTrue(packageNames.size() == 19);
+                assertTrue(packageNames.size() == 17);
             } else if (dependencyLocation.getName().contains("beans")) {
-                assertTrue(packageNames.size() == 15);
+                assertTrue(packageNames.size() == 14);
             }
         }
     }
@@ -167,11 +167,11 @@ public class DependencyLocatorTests {
             assertFalse(packageNames.isEmpty());
 
             if (dependencyLocation.getName().contains("context")) {
-                assertTrue(packageNames.size() == 47);
+                assertTrue(packageNames.size() == 59);
             } else if (dependencyLocation.getName().contains("core")) {
-                assertTrue(packageNames.size() == 19);
+                assertTrue(packageNames.size() == 17);
             } else if (dependencyLocation.getName().contains("beans")) {
-                assertTrue(packageNames.size() == 15);
+                assertTrue(packageNames.size() == 14);
             }
         }
     }
@@ -223,7 +223,7 @@ public class DependencyLocatorTests {
 
         assertTrue(dependencies.size() == 1);
         List<String> packageNames = dependencies.entrySet().iterator().next().getValue();
-        assertTrue(packageNames.size() == 19);
+        assertTrue(packageNames.size() == 17);
         assertTrue(packageNames.get(0).equals("org.springframework.core"));
     }
 
@@ -264,11 +264,11 @@ public class DependencyLocatorTests {
                 assertFalse(packageNames.isEmpty());
 
                 if (dependencyLocation.getName().contains("context")) {
-                    assertTrue(packageNames.size() == 47);
+                    assertTrue(packageNames.size() == 59);
                 } else if (dependencyLocation.getName().contains("core")) {
-                    assertTrue(packageNames.size() == 19);
+                    assertTrue(packageNames.size() == 17);
                 } else if (dependencyLocation.getName().contains("beans")) {
-                    assertTrue(packageNames.size() == 15);
+                    assertTrue(packageNames.size() == 14);
                 }
             }
         }
