@@ -1,9 +1,9 @@
 # Compile
 
-org.eclipse.virgo.kernel=2.1.0.D-20100806120143
+org.eclipse.virgo.kernel=2.1.0.D-20100820122653
 org.eclipse.virgo.osgi=2.1.0.M03-incubation
-org.eclipse.virgo.medic=2.1.0.M03-incubation
-org.eclipse.virgo.repository=2.1.0.M03-incubation
+org.eclipse.virgo.medic=2.1.0.D-20100820121739
+org.eclipse.virgo.repository=2.1.0.D-20100820122257
 org.eclipse.virgo.util=2.1.0.M03-incubation
 org.osgi.core=4.1.0
 
