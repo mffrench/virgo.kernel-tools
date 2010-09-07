@@ -1,16 +1,16 @@
 # Compile
 
-org.eclipse.virgo.kernel=2.1.0.M04-incubation
-org.eclipse.virgo.osgi=2.1.0.M04-incubation
-org.eclipse.virgo.medic=2.1.0.M04-incubation
-org.eclipse.virgo.repository=2.1.0.M04-incubation
-org.eclipse.virgo.util=2.1.0.M04-incubation
+org.eclipse.virgo.kernel=2.1.0.D-20100907111348
+org.eclipse.virgo.osgi=2.1.0.D-20100907105528
+org.eclipse.virgo.medic=2.1.0.D-20100907110508
+org.eclipse.virgo.repository=2.1.0.D-20100907111018
+org.eclipse.virgo.util=2.1.0.D-20100907105749
 org.osgi.core=4.1.0
 
 # Test
-org.eclipse.virgo.test=2.1.0.M04-incubation
+org.eclipse.virgo.test=2.1.0.D-20100907110255
 org.aspectj=1.6.6.RELEASE
-org.eclipse.osgi=3.5.1.R35x_v20091005
+org.eclipse.osgi=3.6.0.v20100517
 
 org.junit=4.7.0
 org.slf4j=1.6.1
