@@ -1,6 +1,6 @@
 # Compile
 
-org.eclipse.virgo.kernel=2.1.0.D-20101008132826
+org.eclipse.virgo.kernel=2.1.0.D-20101012095622
 org.eclipse.virgo.osgi=2.1.0.M06-incubation
 org.eclipse.virgo.medic=2.1.0.D-20101008131805
 org.eclipse.virgo.repository=2.1.0.D-20101008132416
