@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: (incubation) dm Kernel Tools
+Bundle-Name: dm Kernel Tools
 Bundle-Vendor: SpringSource Inc.
 Bundle-SymbolicName: org.eclipse.virgo.kernel.tools
 Bundle-Version: 2.0.0
