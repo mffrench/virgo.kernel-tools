@@ -5,12 +5,11 @@ org.eclipse.virgo.osgi=2.2.0.M01
 org.eclipse.virgo.medic=2.2.0.D-20101108170256
 org.eclipse.virgo.repository=2.2.0.D-20101108170959
 org.eclipse.virgo.util=2.2.0.D-20101108165433
-org.osgi.core=4.1.0
 
 # Test
 org.eclipse.virgo.test=2.2.0.D-20101108170027
 org.aspectj=1.6.6.RELEASE
-org.eclipse.osgi=3.6.1.R36x_v20100806
+org.eclipse.osgi=3.7.0.v20101022
 
 org.junit=4.7.0
 org.slf4j=1.6.1
