@@ -28,21 +28,21 @@ import org.eclipse.virgo.medic.eventlog.EventLogger;
  */
 public class KernelToolsBundleActivator implements BundleActivator {
     
-    ServiceRegistration eventLoggerRegistration;
+    ServiceRegistration<EventLogger> eventLoggerRegistration;
 
     /** 
      * {@inheritDoc}
      */
     public void start(BundleContext context) throws Exception {
         EventLogger eventLogger = new SilentEventLogger();
-        eventLoggerRegistration = context.registerService(EventLogger.class.getName(), eventLogger, null);
+        eventLoggerRegistration = context.registerService(EventLogger.class, eventLogger, null);
     }
 
     /** 
      * {@inheritDoc}
      */
     public void stop(BundleContext context) throws Exception {
-        ServiceRegistration localRegistration = this.eventLoggerRegistration;
+        ServiceRegistration<EventLogger> localRegistration = this.eventLoggerRegistration;
         this.eventLoggerRegistration = null;
         
         if (localRegistration != null) {

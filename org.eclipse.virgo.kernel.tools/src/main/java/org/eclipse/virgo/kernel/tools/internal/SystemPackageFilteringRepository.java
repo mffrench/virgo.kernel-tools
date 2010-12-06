@@ -255,7 +255,7 @@ public final class SystemPackageFilteringRepository {
     private static RepositoryFactory getRepositoryFactory(BundleContext bundleContext) {
         RepositoryFactory repositoryFactory = null;
 
-        ServiceReference serviceReference = bundleContext.getServiceReference(RepositoryFactory.class.getName());
+        ServiceReference<RepositoryFactory> serviceReference = bundleContext.getServiceReference(RepositoryFactory.class);
         if (serviceReference != null) {
             repositoryFactory = (RepositoryFactory)bundleContext.getService(serviceReference);
         }
