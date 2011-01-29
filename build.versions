@@ -1,13 +1,13 @@
 # Compile
 
-org.eclipse.virgo.kernel=2.2.0.D-20110128105934
-org.eclipse.virgo.osgi=2.2.0.D-20110128104245
-org.eclipse.virgo.medic=2.2.0.D-20110128105114
-org.eclipse.virgo.repository=2.2.0.D-20110128105537
-org.eclipse.virgo.util=2.2.0.D-20110128104505
+org.eclipse.virgo.kernel=2.2.0.D-20110129174502
+org.eclipse.virgo.osgi=2.2.0.D-20110129172447
+org.eclipse.virgo.medic=2.2.0.D-20110129173439
+org.eclipse.virgo.repository=2.2.0.D-20110129174018
+org.eclipse.virgo.util=2.2.0.D-20110129172745
 
 # Test
-org.eclipse.virgo.test=2.2.0.D-20110128104922
+org.eclipse.virgo.test=2.2.0.D-20110129173228
 org.aspectj=1.6.6.RELEASE
 org.eclipse.osgi=3.7.0.v20101022
 
