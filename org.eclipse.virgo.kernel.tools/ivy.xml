@@ -27,7 +27,7 @@
 
         <override org="org.eclipse.virgo.repository" module="org.eclipse.virgo.repository" rev="${org.eclipse.virgo.repository}"/>
         <override org="org.eclipse.virgo.util" rev="${org.eclipse.virgo.util}"/>
-        <override org="org.eclipse.osgi" rev="${org.eclipse.osgi}"/>  
+        <override org="org.eclipse.osgi" module="org.eclipse.osgi" rev="${org.eclipse.osgi}"/>
     </dependencies>
 
 </ivy-module>
