@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="dmkerneltools" xmlns:ivy="antlib:org.apache.ivy.ant">
 
+	<!-- kernel tools has no unit tests, so provide an empty list to avoid Clover running all the tests -->
 	<path id="unit.test.bundles">
-		<pathelement location="../org.eclipse.virgo.kernel.tools"/>
 	</path>
 
 	<path id="bundles">
-		<path refid="unit.test.bundles" />
+		<pathelement location="../org.eclipse.virgo.kernel.tools"/>
 	</path>
 
 	<property file="${basedir}/../build.properties"/>
@@ -15,5 +15,9 @@
 
 	<target name="precommit" depends="clean, clean-integration, test, findbugs"
 		description="Performs a CI server-like build, should be run prior to performing a Git push"/>
+		
+	<target name="clover">
+		<fail message="kernel tools has no unit tests, so Clover is not applicable"/>
+	</target>
 
 </project>
