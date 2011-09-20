@@ -41,8 +41,6 @@ public final class ArtifactDescriptorLibraryDefinition implements LibraryDefinit
 
     private final String symbolicName;
     
-    private final Sharing sharing;
-
     private final List<ImportedBundle> importedBundles;
     
     private static final String LIBRARY_VERSION = "Library-Version";
@@ -56,8 +54,6 @@ public final class ArtifactDescriptorLibraryDefinition implements LibraryDefinit
     private static final String LIBRARY_DESCRIPTION = "Library-Description";
 
     private static final String RAW_HEADER_PREFIX = "RAW_HEADER:";
-
-    private static final String SHARING_DIRECTIVE = "sharing";
 
     public ArtifactDescriptorLibraryDefinition(ArtifactDescriptor artifactDescriptor) {
         Set<Attribute> descriptionSet = artifactDescriptor.getAttribute(LIBRARY_DESCRIPTION);
@@ -84,19 +80,6 @@ public final class ArtifactDescriptorLibraryDefinition implements LibraryDefinit
 
         this.symbolicName = symbolicNameAttribute.getValue();
 
-        Map<String, Set<String>> symbolicNameProperties = symbolicNameAttribute.getProperties();
-
-        Sharing sharing = Sharing.SHAREABLE;
-
-        for (Entry<String, Set<String>> property : symbolicNameProperties.entrySet()) {
-            if (SHARING_DIRECTIVE.equals(property.getKey())) {
-                sharing = Sharing.valueOf(property.getValue().iterator().next().toUpperCase(Locale.ENGLISH));
-                break;
-            }
-        }
-
-        this.sharing = sharing;
-
         String importBundleHeader = artifactDescriptor.getAttribute(RAW_HEADER_PREFIX + IMPORT_BUNDLE).iterator().next().getValue();
 
         this.importedBundles = parseImportBundle(importBundleHeader);
@@ -119,10 +102,6 @@ public final class ArtifactDescriptorLibraryDefinition implements LibraryDefinit
 
     public String getName() {
         return this.name;
-    }
-
-    public Sharing getSharing() {
-        return this.sharing;
     }
 
     public String getSymbolicName() {

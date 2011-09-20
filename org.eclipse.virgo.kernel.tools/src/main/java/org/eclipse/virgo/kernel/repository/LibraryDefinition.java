@@ -27,10 +27,6 @@ import org.eclipse.virgo.util.osgi.manifest.ImportedBundle;
  */
 public interface LibraryDefinition extends Definition {
 
-    enum Sharing {
-        SHAREABLE, NON_SHAREABLE
-    }
-
     /**
      * Gets the symbolic name of the library.
      * 
@@ -60,13 +56,6 @@ public interface LibraryDefinition extends Definition {
      * @return the library's version.
      */
     Version getVersion();
-
-    /**
-     * Gets the sharing setting of the library.
-     * 
-     * @return the sharing setting.
-     */
-    Sharing getSharing();
 
     /**
      * Gets the bundles in this library.
