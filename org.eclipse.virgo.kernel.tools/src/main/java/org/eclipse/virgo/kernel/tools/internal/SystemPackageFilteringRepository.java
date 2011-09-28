@@ -48,7 +48,7 @@ import org.eclipse.virgo.repository.configuration.ExternalStorageRepositoryConfi
 import org.eclipse.virgo.repository.configuration.PropertiesRepositoryConfigurationReader;
 import org.eclipse.virgo.repository.configuration.RepositoryConfiguration;
 import org.eclipse.virgo.util.math.OrderedPair;
-import org.eclipse.virgo.util.osgi.VersionRange;
+import org.eclipse.virgo.util.osgi.manifest.VersionRange;
 import org.eclipse.virgo.util.osgi.manifest.BundleManifest;
 import org.eclipse.virgo.util.osgi.manifest.BundleManifestFactory;
 import org.eclipse.virgo.util.osgi.manifest.ExportPackage;

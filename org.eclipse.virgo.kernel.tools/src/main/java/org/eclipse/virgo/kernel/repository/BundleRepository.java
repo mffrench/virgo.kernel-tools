@@ -17,7 +17,7 @@ import org.osgi.framework.Bundle;
 import org.osgi.framework.Version;
 
 import org.eclipse.virgo.repository.ArtifactDescriptor;
-import org.eclipse.virgo.util.osgi.VersionRange;
+import org.eclipse.virgo.util.osgi.manifest.VersionRange;
 
 /**
  * Maintains a registry of known {@link Bundle bundles} and libraries.<p/>

@@ -22,7 +22,7 @@ import org.eclipse.virgo.kernel.repository.internal.ArtifactDescriptorBundleDefi
 import org.eclipse.virgo.repository.ArtifactDescriptor;
 import org.eclipse.virgo.repository.Repository;
 import org.eclipse.virgo.repository.RepositoryAwareArtifactDescriptor;
-import org.eclipse.virgo.util.osgi.VersionRange;
+import org.eclipse.virgo.util.osgi.manifest.VersionRange;
 
 /**
  * A {@link BundleRepository} implementation that is backed by a {@link Repository}.

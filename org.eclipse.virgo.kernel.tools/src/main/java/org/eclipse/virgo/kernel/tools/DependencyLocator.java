@@ -31,7 +31,7 @@ import org.eclipse.virgo.kernel.tools.internal.BundleManifestUtils;
 import org.eclipse.virgo.kernel.tools.internal.SystemPackageFilteringRepository;
 import org.eclipse.virgo.medic.eventlog.EventLogger;
 import org.eclipse.virgo.repository.ArtifactDescriptor;
-import org.eclipse.virgo.util.osgi.VersionRange;
+import org.eclipse.virgo.util.osgi.manifest.VersionRange;
 import org.eclipse.virgo.util.osgi.manifest.BundleManifest;
 import org.eclipse.virgo.util.osgi.manifest.ExportedPackage;
 import org.eclipse.virgo.util.osgi.manifest.ImportedBundle;
