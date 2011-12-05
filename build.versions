@@ -1,16 +1,16 @@
 # Compile
 
-org.eclipse.virgo.kernel=3.1.0.D-20111202140150
-org.eclipse.virgo.osgi=3.1.0.D-20111021090514
-org.eclipse.virgo.medic=3.1.0.D-20111031170115
-org.eclipse.virgo.repository=3.1.0.D-20111031170529
-org.eclipse.virgo.util=3.1.0.BUILD-20111031165127
+org.eclipse.virgo.kernel=3.1.0.D-20111205153601
+org.eclipse.virgo.osgi=3.1.0.D-20111205151528
+org.eclipse.virgo.medic=3.1.0.D-20111205152504
+org.eclipse.virgo.repository=3.1.0.D-20111205153030
+org.eclipse.virgo.util=3.1.0.D-20111205151812
 
 # Test
-org.eclipse.virgo.test=3.1.0.D-20111031165929
+org.eclipse.virgo.test=3.1.0.D-20111205152315
 org.aspectj=1.6.6.RELEASE
-org.eclipse.osgi=3.7.0.v20110613
-org.eclipse.osgi.services=3.3.0.v20110110
+org.eclipse.osgi=3.7.1.R37x_v20110808-1106
+org.eclipse.osgi.services=3.3.0.v20110513
 
 org.junit=4.7.0
 org.slf4j=1.6.1
