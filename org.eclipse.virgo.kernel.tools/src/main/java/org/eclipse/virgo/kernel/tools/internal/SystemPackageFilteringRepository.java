@@ -67,9 +67,11 @@ public final class SystemPackageFilteringRepository {
     private final ArtifactDescriptor systemBundleDescriptor;
 
     private static final String SYSTEM_BUNDLE_SYMBOLIC_NAME = "org.eclipse.osgi";
-    private static final String REPOSITORY_CONFIG_PATH = File.separatorChar + "config" + File.separatorChar + "org.eclipse.virgo.repository.properties";
+    private static final String REPOSITORY_CONFIG_PATH = File.separatorChar + "configuration" + File.separatorChar + "org.eclipse.virgo.repository.properties";
 
     private static final String LIB_SEARCH_PATH = File.separatorChar + "lib" + File.separatorChar + "*.jar";
+    
+    private static final String PLUGINS_SEARCH_PATH = File.separatorChar + "plugins" + File.separatorChar + "*.jar";
     
     public SystemPackageFilteringRepository(String serverHomePath, String[] additionalSearchPaths, String indexDirectoryPath,
         @SuppressWarnings("unused") EventLogger eventLogger, BundleContext bundleContext) throws IOException {
@@ -79,11 +81,11 @@ public final class SystemPackageFilteringRepository {
 
         if (serverHomePath != null) {
             repositoryConfigPath = serverHomePath + REPOSITORY_CONFIG_PATH;
-            serverProfilePath = serverHomePath + File.separator + "lib" + File.separator + "java6-server.profile";
+            serverProfilePath = serverHomePath + File.separator + "configuration" + File.separator + "java6-server.profile";
 
             File serverProfile = new File(serverProfilePath);
             if (!serverProfile.exists()) {
-                serverProfilePath = serverHomePath + File.separator + "lib" + File.separator + "server.profile";
+                serverProfilePath = serverHomePath + File.separator + "configuration" + File.separator + "server.profile";
             }
         }
 
@@ -107,7 +109,7 @@ public final class SystemPackageFilteringRepository {
         try {
             this.mainRepository = createRepository(repositoryConfiguration, bundleContext);
             RepositoryConfiguration systemPackageRepositoryConfiguration = new ExternalStorageRepositoryConfiguration("system-repository", new File(
-                indexDirectoryPath, "system-repository.index"), artifactBridges, serverHomePath + LIB_SEARCH_PATH, null);
+                indexDirectoryPath, "system-repository.index"), artifactBridges, serverHomePath + PLUGINS_SEARCH_PATH, null);
             this.systemPackageRepository = createRepository(systemPackageRepositoryConfiguration, bundleContext);
         } catch (RepositoryCreationException rce) {
             IOException exc = new IOException("A failure occurred during repository creation");
@@ -116,7 +118,7 @@ public final class SystemPackageFilteringRepository {
         }
 
         systemPackages = EquinoxOsgiProfileParser.parseProfileForExportedPackages(serverProfilePath);
-        systemPackages.putAll(findExportsFromOsgiImplementationBundle(new File(serverHomePath, "lib"), SYSTEM_BUNDLE_SYMBOLIC_NAME));
+        systemPackages.putAll(findExportsFromOsgiImplementationBundle(new File(serverHomePath, "plugins"), SYSTEM_BUNDLE_SYMBOLIC_NAME));
 
         jreProvidedDependenciesDescriptors = new HashSet<ArtifactDescriptor>();
         systemBundleDescriptor = new SystemBundleDescriptor(createBundleManifest(this.systemPackages));

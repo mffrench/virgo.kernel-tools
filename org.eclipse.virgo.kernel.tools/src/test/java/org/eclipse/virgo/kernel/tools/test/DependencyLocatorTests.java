@@ -294,7 +294,7 @@ public class DependencyLocatorTests {
         assertEquals("javax.xml.soap", packages.get(0));
         
         key = iterator.next();
-        assertEquals(new File("src/test/resources/dependency-locator/lib/org.eclipse.osgi-3.4.0.v20080529-1200.jar").getAbsoluteFile(), key);
+        assertEquals(new File("src/test/resources/dependency-locator/plugins/org.eclipse.osgi-3.4.0.v20080529-1200.jar").getAbsoluteFile(), key);
         packages = dependencies.get(key);
         assertNotNull(packages);
         assertEquals(1, packages.size());
