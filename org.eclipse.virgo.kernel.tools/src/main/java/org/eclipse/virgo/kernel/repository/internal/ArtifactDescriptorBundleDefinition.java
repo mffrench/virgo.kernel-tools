@@ -16,7 +16,7 @@ import java.util.Dictionary;
 
 import org.eclipse.virgo.kernel.artifact.bundle.BundleBridge;
 import org.eclipse.virgo.kernel.repository.BundleDefinition;
-import org.eclipse.virgo.kernel.tools.internal.SystemPackageFilteringRepository.SystemBundleDescriptor;
+import org.eclipse.virgo.kernel.tools.internal.SystemBundleDescriptor;
 import org.eclipse.virgo.repository.ArtifactDescriptor;
 import org.eclipse.virgo.util.osgi.manifest.BundleManifest;
 import org.eclipse.virgo.util.osgi.manifest.BundleManifestFactory;
