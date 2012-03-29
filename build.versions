@@ -1,7 +1,7 @@
 # Compile
 org.eclipse.virgo.nano=3.5.0.D-20120329114847
 org.eclipse.equinox.region=1.0.0.v20110503
-org.eclipse.virgo.kernel=3.5.0.D-20120329120403
+org.eclipse.virgo.kernel=3.5.0.D-20120329145833
 org.eclipse.virgo.osgi=3.5.0.D-20120329113120
 org.eclipse.virgo.medic=3.5.0.D-20120329114004
 org.eclipse.virgo.repository=3.5.0.D-20120329114508
