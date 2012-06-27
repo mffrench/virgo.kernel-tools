@@ -15,3 +15,4 @@ org.eclipse.osgi.services=3.3.0.v20120307-2102
 
 org.junit=4.7.0
 org.slf4j=1.6.1
+org.slf4j.api=1.6.4.v20120130-2120
