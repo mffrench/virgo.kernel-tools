@@ -1,14 +1,14 @@
 # Compile
-org.eclipse.virgo.nano=3.5.0.D-20120703103404
+org.eclipse.virgo.nano=3.6.0.D-20120711095111
 org.eclipse.equinox.region=1.1.0.v20120319-1602
-org.eclipse.virgo.kernel=3.5.0.D-20120703105535
-org.eclipse.virgo.osgi=3.5.0.D-20120703100719
-org.eclipse.virgo.medic=3.5.0.D-20120703102044
-org.eclipse.virgo.repository=3.5.0.D-20120703102759
-org.eclipse.virgo.util=3.5.0.D-20120703101157
+org.eclipse.virgo.kernel=3.6.0.D-20120711101519
+org.eclipse.virgo.osgi=3.6.0.D-20120711092707
+org.eclipse.virgo.medic=3.6.0.D-20120711093918
+org.eclipse.virgo.repository=3.6.0.D-20120711094540
+org.eclipse.virgo.util=3.6.0.D-20120711093140
 
 # Test
-org.eclipse.virgo.test=3.5.0.D-20120703101806
+org.eclipse.virgo.test=3.6.0.D-20120711093701
 org.aspectj=1.6.12.RELEASE
 org.eclipse.osgi=3.8.0.v20120508-2119
 org.eclipse.osgi.services=3.3.0.v20120307-2102
