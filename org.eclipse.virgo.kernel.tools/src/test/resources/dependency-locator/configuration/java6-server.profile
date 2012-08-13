@@ -1,7 +1,4 @@
 org.osgi.framework.system.packages = \
- com.springsource.server.serviceability.logging;version="1.0",\
- com.springsource.server.serviceability.output;version="1.0",\
- com.springsource.server.serviceability.tracing;version="1.0",\
  javax.accessibility,\
  javax.activation,\
  javax.activation;version="1.1.0",\
