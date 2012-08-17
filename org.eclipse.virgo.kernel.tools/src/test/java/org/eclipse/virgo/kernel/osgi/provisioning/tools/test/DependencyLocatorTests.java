@@ -276,8 +276,6 @@ public class DependencyLocatorTests {
 
     @Test
     public void testImportOfSystemPackagesWithJava6Profile() throws IOException {
-
-
         BundleManifest manifest = BundleManifestFactory.createBundleManifest(new FileReader(new File(
             "src/test/resources/dependency-locator/manifests/IMPORTSYSTEMPACKAGESJAVA6.MF")));
         Map<File, List<String>> dependencies = locator.locateDependencies(manifest);
@@ -286,20 +284,30 @@ public class DependencyLocatorTests {
         assertTrue(keys.size() == 2);
         
         Iterator<File> iterator = keys.iterator();
-        File key = iterator.next();
-        assertNull(key);
-        List<String> packages = dependencies.get(key);
+        File key1 = iterator.next();
+        File key2 = iterator.next();
+        if (key1 == null && key2 != null) {
+        	checkSetKeys(dependencies, key1, key2);
+        } else if (key1 != null && key2 == null) {
+        	checkSetKeys(dependencies, key2, key1);
+        } else {
+        	fail("Expected one null valued key and one pointing to true bundle location. Got different key configuration: " + dependencies.toString());
+        }
+    }
+
+    private void checkSetKeys(Map<File, List<String>> dependencies, File nullKey, File nonNullKey) {
+		assertNull(nullKey);
+        List<String> packages = dependencies.get(nullKey);
         assertNotNull(packages);
         assertEquals(1, packages.size());
         assertEquals("javax.xml.soap", packages.get(0));
-        
-        key = iterator.next();
-        assertEquals(new File("src/test/resources/dependency-locator/plugins/org.eclipse.osgi-3.4.0.v20080529-1200.jar").getAbsoluteFile(), key);
-        packages = dependencies.get(key);
+
+        assertEquals(new File("src/test/resources/dependency-locator/plugins/org.eclipse.osgi-3.4.0.v20080529-1200.jar").getAbsoluteFile(), nonNullKey);
+        packages = dependencies.get(nonNullKey);
         assertNotNull(packages);
         assertEquals(1, packages.size());
         assertEquals("org.osgi.framework", packages.get(0));
-    }
+	}
 
     @Test
     public void getBundles() {

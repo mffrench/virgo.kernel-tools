@@ -288,20 +288,30 @@ public class Pre35DependencyLocatorTests {
         assertTrue(keys.size() == 2);
         
         Iterator<File> iterator = keys.iterator();
-        File key = iterator.next();
-        assertNull(key);
-        List<String> packages = dependencies.get(key);
+        File key1 = iterator.next();
+        File key2 = iterator.next();
+        if (key1 == null && key2 != null) {
+        	checkSetKeys(dependencies, key1, key2);
+        } else if (key1 != null && key2 == null) {
+        	checkSetKeys(dependencies, key2, key1);
+        } else {
+        	fail("Expected one null valued key and one pointing to true bundle location. Got different key configuration: " + dependencies.toString());
+        }
+    }
+
+	private void checkSetKeys(Map<File, List<String>> dependencies, File nullKey, File nonNullKey) {
+		assertNull(nullKey);
+        List<String> packages = dependencies.get(nullKey);
         assertNotNull(packages);
         assertEquals(1, packages.size());
         assertEquals("javax.xml.soap", packages.get(0));
-        
-        key = iterator.next();
-        assertEquals(new File("src/test/resources/pre35-dependency-locator/lib/org.eclipse.osgi-3.4.0.v20080529-1200.jar").getAbsoluteFile(), key);
-        packages = dependencies.get(key);
+
+        assertEquals(new File("src/test/resources/pre35-dependency-locator/lib/org.eclipse.osgi-3.4.0.v20080529-1200.jar").getAbsoluteFile(), nonNullKey);
+        packages = dependencies.get(nonNullKey);
         assertNotNull(packages);
         assertEquals(1, packages.size());
         assertEquals("org.osgi.framework", packages.get(0));
-    }
+	}
 
     @Test
     public void getBundles() {
@@ -315,5 +325,5 @@ public class Pre35DependencyLocatorTests {
 
         Set<? extends ArtifactDescriptor> libraries = locator.getLibraries();
         assertEquals(1, libraries.size());
-    }
+    }	
 }
