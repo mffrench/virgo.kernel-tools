@@ -1,13 +1,13 @@
 # Compile
-org.eclipse.virgo.nano=3.7.0.D-20130426092018
+org.eclipse.virgo.nano=3.7.0.D-20130521041633
 org.eclipse.equinox.region=1.1.0.v20120319-1602
-org.eclipse.virgo.kernel=3.7.0.D-20130426092903
-org.eclipse.virgo.medic=3.7.0.D-20130426091716
-org.eclipse.virgo.repository=3.7.0.D-20130426092504
-org.eclipse.virgo.util=3.7.0.D-20130426090800
+org.eclipse.virgo.kernel=3.7.0.D-20130521042331
+org.eclipse.virgo.medic=3.7.0.D-20130521041335
+org.eclipse.virgo.repository=3.7.0.D-20130521042107
+org.eclipse.virgo.util=3.7.0.D-20130521040431
 
 # Test
-org.eclipse.virgo.test=3.7.0.D-20130426091442
+org.eclipse.virgo.test=3.7.0.D-20130521041102
 org.aspectj=1.6.12.RELEASE
 org.eclipse.osgi=3.8.1.v20120830-144521
 org.eclipse.osgi.services=3.3.0.v20120307-2102
